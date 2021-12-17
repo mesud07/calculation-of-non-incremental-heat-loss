@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:untitled/FourthPage/view/fourthPage.dart';
+import 'package:untitled/ResultPage/view/resultPage.dart';
 import 'package:untitled/SecondPage/view/secondPage.dart';
 import 'package:untitled/ThirdPage/view/thirdPage.dart';
+import 'package:untitled/cikarilacakElemanListPage/view/cikarilacakElemanListPage.dart';
 
 import 'FiftPage/view/fiftPage.dart';
 import 'FirstPage/view/firstPage.dart';
@@ -29,6 +31,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/thirdPage",page : () => ThirdPage(),transition: Transition.fadeIn),
         GetPage(name: "/fourthPage",page : () => FourthPage(),transition: Transition.fadeIn),
         GetPage(name: "/fifthPage",page : () => FiftPage(),transition: Transition.fadeIn),
+        GetPage(name: "/resultPage",page : () => ResultPage(),transition: Transition.fadeIn),
 
       ],
       home: FirstPage(),
