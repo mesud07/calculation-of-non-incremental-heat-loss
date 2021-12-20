@@ -7,4 +7,4 @@ Mühendislikte uygulamalar bilimi dersi için yaptığım " Arttırımsız Isı 
  -Barındırdığı pencere kapı kolon vb. bilgilerine ve alanlarına 
  -Bitişik olduğu oda türlerine ve taban ve tavanın bağlı olduğu (daire,çatı,bodrum,toprak) katlara göre kcal cinsinden hesaplanmaktadır.
  
- Uygulama da Get State paketini kullanıyorum.
+ Uygulama da Get State paketini kullandım.
