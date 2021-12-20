@@ -23,7 +23,7 @@ class _FourthPageState extends State<FourthPage> {
     TextEditingController _tabanKatsayiController= TextEditingController();
 
 
-  List<String> turler=["Seciniz","Çimento","Tuğla","Taş"];
+  List<String> turler=["Seçiniz","Çatı","bodrum","garaj,hol","toprak","kazan dairesi"];
   List<DropdownMenuItem<String>> turListDropDown=[];
   @override
   void initState() {
@@ -33,6 +33,7 @@ class _FourthPageState extends State<FourthPage> {
   }
   @override
   Widget build(BuildContext context) {
+   
     return Scaffold(
       bottomSheet:  Container(
                         alignment: Alignment.centerRight,
@@ -109,7 +110,7 @@ class _FourthPageState extends State<FourthPage> {
                               ),
                             ),
           
-                              Row(
+                            /*  Row(
                               children: [
           
                                 Container(
@@ -117,7 +118,7 @@ class _FourthPageState extends State<FourthPage> {
                               height: 40,
                               
                               child: Text(
-                                "Eleman Türü",style: elemanTuruText,)),
+                                "Tavan Şekli",style: elemanTuruText,)),
                                 Container(
                                   
                                   margin: EdgeInsets.only(left: 20,right: 20,bottom: 10),
@@ -141,7 +142,7 @@ class _FourthPageState extends State<FourthPage> {
                                   ),
                                 ),
                               ],
-                            ),
+                            ),*/
                                 Divider(
                                   height: 20,
                                   thickness: 5,
@@ -166,7 +167,7 @@ class _FourthPageState extends State<FourthPage> {
                               height: 40,
                               
                               child: Text(
-                                "Eleman Türü",style: elemanTuruText,)),
+                                "Taban Şekli",style: elemanTuruText,)),
                                 Container(
                                   
                                   margin: EdgeInsets.only(left: 20,right: 20,bottom: 10),
@@ -204,8 +205,9 @@ class _FourthPageState extends State<FourthPage> {
         _controller.tabanKatsayiSet=double.parse(_tabanKatsayiController.text);
 
         print(_controller.tabanTavanGenislikGet.toString()+_controller.tabanTavanUzunlukGet.toString()+_controller.tabanElemanTuruGet);
-
-                
+        
+                sicaklikFarkBul();
+                tabanSicaklikBul();
                 
       },
       child: Container(
@@ -247,4 +249,311 @@ class _FourthPageState extends State<FourthPage> {
           }
 
   }
+
+  void sicaklikFarkBul(){
+    var katsayi=_controller.tavanKatsayiGet;
+    var ilSicaklik=_controller.sehir.value;
+    print("il sıcaklığı "+ilSicaklik.toString());
+    print("katsayı = "+katsayi.toString());
+    
+    if(katsayi>5){
+     switch(ilSicaklik){
+      case 3:
+        _controller.tavanSicaklikSet=6;
+        break;
+      case 0:
+        _controller.tavanSicaklikSet=3;
+        break;
+      case -3:
+        _controller.tavanSicaklikSet=0;
+        break;
+      case -5:
+        _controller.tavanSicaklikSet=-3;
+        break;
+      case -9:
+        _controller.tavanSicaklikSet=-6;
+        break;
+      case -10:
+        _controller.tavanSicaklikSet=-7;
+        break;
+      case -12:
+        _controller.tavanSicaklikSet=-9;
+        break;
+      case -15:
+        _controller.tavanSicaklikSet=-12;
+        break;
+      case -18:
+        _controller.tavanSicaklikSet=-15;
+        break;
+      case -20:
+        _controller.tavanSicaklikSet=-16;
+        break;
+      case -21:
+        _controller.tavanSicaklikSet=-18;
+        break;
+      case -24:
+        _controller.tavanSicaklikSet=-18;
+        break;
+      case -25:
+        _controller.tavanSicaklikSet=-20;
+        break;
+      case -27:
+        _controller.tavanSicaklikSet=-22;  
+        break;   
+     }
+    }
+    else if(katsayi>=2){
+      switch(ilSicaklik){
+      case 3:
+        _controller.tavanSicaklikSet=9;
+        break;
+      case 0:
+        _controller.tavanSicaklikSet=6;
+        break;
+      case -3:
+        _controller.tavanSicaklikSet=3;
+        break;
+      case -5:
+        _controller.tavanSicaklikSet=0;
+        break;
+      case -9:
+        _controller.tavanSicaklikSet=-3;
+        break;
+      case -10:
+        _controller.tavanSicaklikSet=-4;
+        break;
+      case -12:
+        _controller.tavanSicaklikSet=-6;
+        break;
+      case -15:
+        _controller.tavanSicaklikSet=-9;
+        break;
+      case -18:
+        _controller.tavanSicaklikSet=-12;
+        break;
+      case -20:
+        _controller.tavanSicaklikSet=-13;
+        break;
+      case -21:
+        _controller.tavanSicaklikSet=-15;
+        break;
+      case -24:
+        _controller.tavanSicaklikSet=-15;
+        break;
+      case -25:
+        _controller.tavanSicaklikSet=-17;
+        break;
+      case -27:
+        _controller.tavanSicaklikSet=-18;  
+        break;   
+     }
+    }
+    else{
+      switch(ilSicaklik){
+      case 3:
+        _controller.tavanSicaklikSet=12;
+        break;
+      case 0:
+        _controller.tavanSicaklikSet=9;
+        break;
+      case -3:
+        _controller.tavanSicaklikSet=6;
+        break;
+      case -5:
+        _controller.tavanSicaklikSet=3;
+        break;
+      case -9:
+        _controller.tavanSicaklikSet=0;
+        break;
+      case -10:
+        _controller.tavanSicaklikSet=-1;
+        break;
+      case -12:
+        _controller.tavanSicaklikSet=-3;
+        break;
+      case -15:
+        _controller.tavanSicaklikSet=-6;
+        break;
+      case -18:
+        _controller.tavanSicaklikSet=-9;
+        break;
+      case -20:
+        _controller.tavanSicaklikSet=-10;
+        break;
+      case -21:
+        _controller.tavanSicaklikSet=-12;
+        break;
+      case -24:
+        _controller.tavanSicaklikSet=-12;
+        break;
+      case -25:
+        _controller.tavanSicaklikSet=-14;
+        break;
+      case -27:
+        _controller.tavanSicaklikSet=-15;  
+        break;   
+     }
+    }
+    print(_controller.hesabiYapilacakOdaGet.value);
+    int fark=_controller.hesabiYapilacakOdaGet.value-_controller.tavanSicaklikGet;
+    print("fark göster : "+fark.toString());
+
+  }
+
+//Oda sıcaklığından çıkarılması gereken değeri bulan fonksiyon
+// _controller.hesabiYapilacakOdaGet-_controller.tavanSicaklikGet;
+  void tabanSicaklikBul(){
+    int sehirSicakligi=_controller.sehir.value;
+    String tabanSekli=_controller.tabanElemanTuruGet;
+  print(tabanSekli);
+    if(tabanSekli=="bodrum"){
+         switch(sehirSicakligi){
+      case 3:
+        _controller.tabanSicaklikSet=15;
+        break;
+      case 0:
+        _controller.tabanSicaklikSet=12;
+        break;
+      case -3:
+        _controller.tabanSicaklikSet=12;
+        break;
+      case -5:
+        _controller.tabanSicaklikSet=10;
+        break;
+      case -9:
+        _controller.tabanSicaklikSet=9;
+        break;
+      case -10:
+        _controller.tabanSicaklikSet=9;
+        break;
+      case -12:
+        _controller.tabanSicaklikSet=6;
+        break;
+      case -15:
+        _controller.tabanSicaklikSet=-6;
+        break;
+      case -18:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -20:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -21:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -24:
+        _controller.tabanSicaklikSet=0;
+        break;
+      case -25:
+        _controller.tabanSicaklikSet=0;
+        break;
+      case -27:
+        _controller.tabanSicaklikSet=0;  
+        break;   
+     }
+        
+        
+    }  
+    else if(tabanSekli=="garaj,hol"){
+       switch(sehirSicakligi){
+      case 3:
+        _controller.tabanSicaklikSet=9;
+        break;
+      case 0:
+        _controller.tabanSicaklikSet=6;
+        break;
+      case -3:
+        _controller.tabanSicaklikSet=6;
+        break;
+      case -5:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -9:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -10:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -12:
+        _controller.tabanSicaklikSet=0;
+        break;
+      case -15:
+        _controller.tabanSicaklikSet=0;
+        break;
+      case -18:
+        _controller.tabanSicaklikSet=-3;
+        break;
+      case -20:
+        _controller.tabanSicaklikSet=-3;
+        break;
+      case -21:
+        _controller.tabanSicaklikSet=-3;
+        break;
+      case -24:
+        _controller.tabanSicaklikSet=-6;
+        break;
+      case -25:
+        _controller.tabanSicaklikSet=-6;
+        break;
+      case -27:
+        _controller.tabanSicaklikSet=-6;  
+        break;   
+     }
+    }
+    else if(tabanSekli=="toprak"){
+      switch(sehirSicakligi){
+      case 3:
+        _controller.tabanSicaklikSet=9;
+        break;
+      case 0:
+        _controller.tabanSicaklikSet=9;
+        break;
+      case -3:
+        _controller.tabanSicaklikSet=9;
+        break;
+      case -5:
+        _controller.tabanSicaklikSet=5;
+        break;
+      case -9:
+        _controller.tabanSicaklikSet=5;
+        break;
+      case -10:
+        _controller.tabanSicaklikSet=5;
+        break;
+      case -12:
+        _controller.tabanSicaklikSet=5;
+        break;
+      case -15:
+        _controller.tabanSicaklikSet=5;
+        break;
+      case -18:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -20:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -21:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -24:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -25:
+        _controller.tabanSicaklikSet=3;
+        break;
+      case -27:
+        _controller.tabanSicaklikSet=0;  
+        break;   
+     }
+    }
+    else if(tabanSekli=="kazan dairesi"){
+        _controller.tabanSicaklikSet=15;
+    }
+     else{
+    print("deger eklenmemiştir.");
+  }
+
+  print("taban sıcaklığı : "+_controller.tabanSicaklikGet.toString());
+  }
+ 
 }

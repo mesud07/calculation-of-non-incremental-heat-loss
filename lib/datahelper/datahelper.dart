@@ -4,11 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled/FiftPage/view/fiftPage.dart';
-import 'package:untitled/FirstPage/view/firstPage.dart';
 import 'package:untitled/FourthPage/view/fourthPage.dart';
-import 'package:untitled/SecondPage/view/secondPage.dart';
-import 'package:untitled/ThirdPage/view/thirdPage.dart';
 import 'package:untitled/utils/controller.dart';
 final _controller = Get.put(Controller());
 Widget Continue(BuildContext context,int page){
@@ -23,13 +19,14 @@ Widget Continue(BuildContext context,int page){
                                    case 3:
                                    
                       Get.toNamed('/thirdPage');
-                      print(_controller.sehir.value);
+                     // print(_controller.sehir.value);
                                    break;
                                    case 4:
                       Get.toNamed('/fourthPage');
                                    break;
                                    case 5:
                       Get.toNamed('/fifthPage');
+                      
                                    break;
                                    case 6:
                       Get.toNamed('/resultPage');

@@ -59,9 +59,11 @@ var cikarilacakElemanList = [].obs;
 var _tabanTavanGenislik=0.toDouble().obs;
 var _tabanTavanUzunluk=0.toDouble().obs;
 var _tavanKatsayi=0.toDouble().obs;
-var _tavanElemanTuru="Çimento".obs;
+var _tavanElemanTuru="Seçiniz".obs;
 var _tabanKatsayi=0.toDouble().obs;
-var _tabanElemanTuru="Çimento".obs;
+var _tabanElemanTuru="Seçiniz".obs;
+var _tavanSicaklik=0.obs;
+var _tabanSicaklik=0.obs;
 
 get tabanTavanGenislikGet=>_tabanTavanGenislik.value;
 set tabanTavanUzunlukSet(value)=>_tabanTavanUzunluk.value=value;
@@ -81,6 +83,11 @@ set tabanKatsayiSet(value)=>_tabanKatsayi.value=value;
 get tabanElemanTuruGet=>_tabanElemanTuru.value;
 set tabanElemanTuruSet(value)=>_tabanElemanTuru.value=value;
 
+get tavanSicaklikGet=>_tavanSicaklik.value;
+set tavanSicaklikSet(value)=>_tavanSicaklik.value=value;
+
+get tabanSicaklikGet=>_tabanSicaklik.value;
+set tabanSicaklikSet(value)=>_tabanSicaklik.value=value;
 
   
  //İç duvar bilgileri

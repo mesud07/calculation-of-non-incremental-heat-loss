@@ -91,7 +91,10 @@ class _FiftPageState extends State<FiftPage> {
                                       controller: yukseklikController,
                                       decoration: InputDecoration(
                                           hintText: "Yükseklik",
-                                          border: OutlineInputBorder())),
+                                          border: OutlineInputBorder(),
+                                          focusColor: Colors.red,
+                                          
+                                          )),
                                 ),
 
                                 Container(
